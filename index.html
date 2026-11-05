@@ -75,7 +75,7 @@ main [id]{scroll-margin-top:calc(var(--demo-h,37px) + 72px)}
 .view-patronat .field-err{color:#FFD9C7}
 [aria-invalid="true"]{outline:2px solid #A93F09;outline-offset:1px}
 .view-patronat [aria-invalid="true"]{outline-color:#FFD9C7}
-.rc{--c:326.73;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;gap:22px;padding:32px;border-radius:24px;background:#281755;color:#F3F0FA;box-shadow:0 30px 60px -28px rgba(40,23,85,.6),0 0 0 1px rgba(255,255,255,.06) inset}
+.rc{--c:326.73;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;gap:22px;padding:32px;border-radius:24px;background:#281755;color:#F3F0FA;box-shadow:0 24px 48px -28px rgba(26,23,27,.4),0 0 0 1px rgba(255,255,255,.06) inset}
 .rc::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 100% 0%,rgba(233,90,16,.34),transparent 55%),radial-gradient(90% 60% at 0% 100%,rgba(120,74,185,.45),transparent 60%),linear-gradient(180deg,#281755,#2E1A63)}
 .rc::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:14px 14px;-webkit-mask-image:linear-gradient(160deg,#000,transparent 70%);mask-image:linear-gradient(160deg,#000,transparent 70%)}
 .rc-title{font-family:'Sora',system-ui,sans-serif;letter-spacing:-.02em;font-size:24px;font-weight:700;color:#FFFFFF}
@@ -107,6 +107,24 @@ main [id]{scroll-margin-top:calc(var(--demo-h,37px) + 72px)}
 .rc .rc-aud li,.rc .rc-chips li{transition:opacity .5s ease-out,transform .5s cubic-bezier(.22,1,.36,1),background-color .2s ease-out,border-color .2s ease-out;transition-delay:calc(var(--i,0) * 70ms + 500ms),calc(var(--i,0) * 70ms + 500ms),0s,0s}
 @media (prefers-reduced-motion: reduce){.rc *{transition:none!important}}
 @media (max-width: 960px){.rc{padding:24px;gap:18px}.rc-hero{gap:16px}.rc-ring{flex-basis:104px;width:104px;height:104px}.rc-num{font-size:30px}.rc-num small{font-size:16px}}
+.st{gap:24px;padding:36px}
+.st-head{display:flex;flex-direction:column;gap:4px}
+.st-sub{font-size:14px;color:#BFB3DE}
+.st-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(183,156,240,.18);border-radius:16px;overflow:hidden}
+.st-tile{display:flex;flex-direction:column;gap:6px;padding:20px 20px 22px;background:#2B1959;position:relative;transition:background-color .25s ease-out}
+.st-tile:hover{background:#33206A}
+.st-tile:first-child{grid-column:1/-1;padding:24px 24px 26px;background:linear-gradient(135deg,#3A2380,#2B1959 70%)}
+.st-tile:first-child .st-num{font-size:64px}
+.st-tile:last-child{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:14px}
+.st-tile:last-child .st-tag{flex-basis:100%}
+.st-tag{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#BFB3DE}
+.st-dot{width:8px;height:8px;border-radius:50%;background:var(--d);box-shadow:0 0 0 3px color-mix(in srgb,var(--d) 25%,transparent)}
+.st-num{font-family:'Sora',system-ui,sans-serif;font-weight:700;letter-spacing:-.03em;font-size:40px;line-height:1.05;color:#FFFFFF;font-variant-numeric:tabular-nums}
+.st-desc{font-size:15px;line-height:1.4;color:#DCD4EE}
+.rc.rc-pre .st-tile{opacity:0;transform:translateY(10px)}
+.rc .st-tile{transition:opacity .5s ease-out,transform .5s cubic-bezier(.22,1,.36,1),background-color .25s ease-out;transition-delay:calc(var(--i) * 80ms),calc(var(--i) * 80ms),0s}
+@media (max-width: 960px){.st{padding:24px}.st-tile{padding:16px}.st-tile:first-child{padding:20px}.st-tile:first-child .st-num{font-size:48px}.st-num{font-size:30px}}
+@media (max-width: 420px){.st-num{font-size:26px}.st-desc{font-size:14px}}
 </style>
 </head>
 <body>
@@ -139,13 +157,9 @@ main [id]{scroll-margin-top:calc(var(--demo-h,37px) + 72px)}
 <a href="#patronat" style="padding: 15px 24px; border-radius: 10px; border: 1.5px solid #1A171B; color: #1A171B; text-decoration: none; font-weight: 600; font-size: 17px;">Szukasz patrona medialnego?</a>
 </div>
 </div>
-<div style="background: #FFF3EA; border: 1px solid #F6D5BF; color: #1A171B; border-radius: 20px; padding: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px;">
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">24 000+</div><div style="font-size: 15px; color: #4B4950;">użytkowników portalu rocznie</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">23 500+</div><div style="font-size: 15px; color: #4B4950;">wyświetleń w social mediach kwartalnie</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">54</div><div style="font-size: 15px; color: #4B4950;">wydania kwartalnika od 2013 r.</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">1 000+</div><div style="font-size: 15px; color: #4B4950;">egz. druku każdego wydania</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">4 000</div><div style="font-size: 15px; color: #4B4950;">egz. rocznie na konferencjach i warsztatach</div></div>
-<div style="display: flex; flex-direction: column; gap: 4px;"><div style="font-family: 'Sora', system-ui, sans-serif; letter-spacing: -0.02em; font-size: 44px; font-weight: 700;">1 247</div><div style="font-size: 15px; color: #4B4950;">artykułów od 581 autorów</div></div>
+<div class="rc st">
+<div class="st-head"><span class="rc-title">Strefa PMI w liczbach</span></div>
+<div class="st-grid"><div class="st-tile" style="--d:#FF9A4D;--i:0"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Portal strefapmi.pl</span><span class="st-num"><span data-count="24000">24 000</span>+</span><span class="st-desc">użytkowników portalu rocznie</span></div><div class="st-tile" style="--d:#41C0EB;--i:1"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Social media</span><span class="st-num"><span data-count="23500">23 500</span>+</span><span class="st-desc">wyświetleń w social mediach kwartalnie</span></div><div class="st-tile" style="--d:#B79CF0;--i:2"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Kwartalnik</span><span class="st-num"><span data-count="54">54</span></span><span class="st-desc">wydania kwartalnika od 2013 r.</span></div><div class="st-tile" style="--d:#FFD25E;--i:3"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Druk</span><span class="st-num"><span data-count="1000">1 000</span>+</span><span class="st-desc">egz. druku każdego wydania</span></div><div class="st-tile" style="--d:#FF9A4D;--i:4"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Wydarzenia</span><span class="st-num"><span data-count="4000">4 000</span></span><span class="st-desc">egz. rocznie na konferencjach i warsztatach</span></div><div class="st-tile" style="--d:#FFFFFF;--i:5"><span class="st-tag"><span class="st-dot" aria-hidden="true"></span>Autorzy</span><span class="st-num"><span data-count="1247">1 247</span></span><span class="st-desc">artykułów od 581 autorów</span></div></div>
 </div>
 </section>
 
@@ -599,18 +613,18 @@ main [id]{scroll-margin-top:calc(var(--demo-h,37px) + 72px)}
   sub.forEach(function(a){var t=document.getElementById(a.dataset.sec);if(t)io.observe(t);});
  }
  document.addEventListener('click',function(e){var a=e.target.closest('[data-cel]');if(!a)return;var c=document.getElementById('cel-select');if(c)c.value=a.dataset.cel;});
- var rc=document.querySelector('.rc');
- if(rc){
-  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,num=rc.querySelector('[data-count]');
-  if(!rm&&'IntersectionObserver' in window){
-   rc.classList.add('rc-pre');num.textContent='0';
-   var rio=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;rio.disconnect();
-    requestAnimationFrame(function(){rc.classList.remove('rc-pre');var t0=performance.now(),n=+num.dataset.count;
-     (function step(t){var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,4);num.textContent=Math.round(n*e);if(k<1)requestAnimationFrame(step);})(t0);setTimeout(function(){num.textContent=num.dataset.count;},1600);});
-   },{threshold:.35});
-   rio.observe(rc);
-  }
- }
+ var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function fmtN(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');}
+ document.querySelectorAll('.rc').forEach(function(rc){
+  var nums=rc.querySelectorAll('[data-count]');
+  if(rm||!('IntersectionObserver' in window))return;
+  rc.classList.add('rc-pre');
+  var rio=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;rio.disconnect();
+   rc.classList.remove('rc-pre');var t0=Date.now();
+   var iv=setInterval(function(){var k=Math.min(1,(Date.now()-t0)/1600),e=1-Math.pow(1-k,4);nums.forEach(function(x){x.textContent=fmtN(Math.round(+x.dataset.count*e));});if(k>=1)clearInterval(iv);},16);
+  },{threshold:.3});
+  rio.observe(rc);
+ });
 if(dt)dt.min=new Date().toISOString().slice(0,10);
  document.getElementById('ph-toggle').addEventListener('change',function(e){document.body.classList.toggle('hide-ph',!e.target.checked);});
 })();
